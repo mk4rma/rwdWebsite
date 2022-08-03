@@ -18,6 +18,19 @@ const highlightMenu = () => {
     const startMenu = document.querySelector('#start-page');
     let scrollPos = window.scrollY;
     // console.log(scrollPos);
+
+    var fileName = location.href.split("/").slice(-1);
+    console.log(fileName);
+
+    if (fileName == "introduction.html") {
+      introMenu.classList.add('highlight');
+    }
+    else if (fileName == "introduction.html") {
+      typesMenu.classList.add('highlight');
+    }
+    else if (fileName == "introduction.html") {
+      startMenu.classList.add('highlight');
+    }
   
     // adds 'highlight' class to my menu items
     if (window.innerWidth > 960 && scrollPos < 600) {
@@ -40,7 +53,7 @@ const highlightMenu = () => {
         typesMenu.classList.remove('highlight');
         return;
     }
-  
+
     if ((elem && window.innerWidth < 960 && scrollPos < 600) || elem) {
       elem.classList.remove('highlight');
     }

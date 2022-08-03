@@ -326,6 +326,11 @@
     font-size: 2rem;
     font-weight: 700;
 }
+
+.main_content a {
+    text-decoration: none;
+    color: darkgray;
+}
   
 .main_btn {
     font-size: 1.8rem;
